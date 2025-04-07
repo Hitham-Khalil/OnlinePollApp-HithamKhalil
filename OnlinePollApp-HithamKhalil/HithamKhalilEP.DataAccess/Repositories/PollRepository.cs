@@ -4,10 +4,11 @@ using YourNameEP.Domain.Models;
 using System;
 using System.Collections.Generic;
 using System.Threading.Tasks;
+using HithamKhalilEP.Domain.Interfaces;
 
 namespace YourNameEP.DataAccess.Repositories
 {
-    public class PollRepository
+    public class PollRepository : IPollRepository
     {
         private readonly PollDbContext _context;
 
