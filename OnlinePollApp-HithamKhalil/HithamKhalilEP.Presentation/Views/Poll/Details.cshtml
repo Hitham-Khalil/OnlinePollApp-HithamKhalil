@@ -1,0 +1,12 @@
+﻿@model YourNameEP.Domain.Models.Poll
+
+<h2>@Model.Title</h2>
+
+<ul class="list-group mb-3">
+    <li class="list-group-item">Option 1: @Model.Option1Text</li>
+    <li class="list-group-item">Option 2: @Model.Option2Text</li>
+    <li class="list-group-item">Option 3: @Model.Option3Text</li>
+</ul>
+
+<a href="/Poll/Vote/@Model.Id" class="btn btn-success">Vote Now</a>
+<a href="/Poll/Index" class="btn btn-secondary">Back to Polls</a>

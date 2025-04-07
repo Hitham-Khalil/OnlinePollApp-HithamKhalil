@@ -40,5 +40,15 @@ namespace YourNameEP.Presentation.Controllers
             var polls = await _pollRepository.GetPolls();
             return View(polls);
         }
+
+        public async Task<IActionResult> Details(int id)
+        {
+            var poll = await _pollRepository.GetPollById(id);
+
+            if (poll == null)
+                return NotFound();
+
+            return View(poll);
+        }
     }
 }

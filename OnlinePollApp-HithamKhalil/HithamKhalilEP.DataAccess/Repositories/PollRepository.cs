@@ -34,5 +34,10 @@ namespace YourNameEP.DataAccess.Repositories
                 .OrderByDescending(p => p.DateCreated) // Sorts polls by date (most recent first)
                 .ToListAsync();
         }
+
+        public async Task<Poll?> GetPollById(int id)
+        {
+            return await _context.Polls.FirstOrDefaultAsync(p => p.Id == id);
+        }
     }
 }
