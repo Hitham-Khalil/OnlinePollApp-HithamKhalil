@@ -39,5 +39,31 @@ namespace YourNameEP.DataAccess.Repositories
         {
             return await _context.Polls.FirstOrDefaultAsync(p => p.Id == id);
         }
+
+        public async Task<bool> Vote(int pollId, int optionNumber)
+        {
+            var poll = await _context.Polls.FirstOrDefaultAsync(p => p.Id == pollId);
+
+            if (poll == null) return false;
+
+            switch (optionNumber)
+            {
+                case 1:
+                    poll.Option1VotesCount++;
+                    break;
+                case 2:
+                    poll.Option2VotesCount++;
+                    break;
+                case 3:
+                    poll.Option3VotesCount++;
+                    break;
+                default:
+                    return false;
+            }
+
+            await _context.SaveChangesAsync();
+            return true;
+        }
+
     }
 }

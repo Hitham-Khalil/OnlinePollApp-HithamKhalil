@@ -50,5 +50,28 @@ namespace YourNameEP.Presentation.Controllers
 
             return View(poll);
         }
+
+        [HttpGet]
+        public async Task<IActionResult> Vote(int id)
+        {
+            var poll = await _pollRepository.GetPollById(id);
+            if (poll == null)
+                return NotFound();
+
+            return View(poll);
+        }
+
+        [HttpPost]
+        public async Task<IActionResult> Vote(int pollId, int selectedOption)
+        {
+            var success = await _pollRepository.Vote(pollId, selectedOption);
+
+            if (!success)
+                return BadRequest("Unable to vote.");
+
+            return RedirectToAction("Index");
+        }
+
+
     }
 }
