@@ -1,0 +1,11 @@
+C:\Users\User\source\repos\OnlinePollApp-HithamKhalil\OnlinePollApp-HithamKhalil\HithamKhalilEP.Domain\bin\Debug\net6.0\HithamKhalilEP.Domain.deps.json
+C:\Users\User\source\repos\OnlinePollApp-HithamKhalil\OnlinePollApp-HithamKhalil\HithamKhalilEP.Domain\bin\Debug\net6.0\HithamKhalilEP.Domain.dll
+C:\Users\User\source\repos\OnlinePollApp-HithamKhalil\OnlinePollApp-HithamKhalil\HithamKhalilEP.Domain\bin\Debug\net6.0\HithamKhalilEP.Domain.pdb
+C:\Users\User\source\repos\OnlinePollApp-HithamKhalil\OnlinePollApp-HithamKhalil\HithamKhalilEP.Domain\obj\Debug\net6.0\HithamKhalilEP.Domain.GeneratedMSBuildEditorConfig.editorconfig
+C:\Users\User\source\repos\OnlinePollApp-HithamKhalil\OnlinePollApp-HithamKhalil\HithamKhalilEP.Domain\obj\Debug\net6.0\HithamKhalilEP.Domain.AssemblyInfoInputs.cache
+C:\Users\User\source\repos\OnlinePollApp-HithamKhalil\OnlinePollApp-HithamKhalil\HithamKhalilEP.Domain\obj\Debug\net6.0\HithamKhalilEP.Domain.AssemblyInfo.cs
+C:\Users\User\source\repos\OnlinePollApp-HithamKhalil\OnlinePollApp-HithamKhalil\HithamKhalilEP.Domain\obj\Debug\net6.0\HithamKhalilEP.Domain.csproj.CoreCompileInputs.cache
+C:\Users\User\source\repos\OnlinePollApp-HithamKhalil\OnlinePollApp-HithamKhalil\HithamKhalilEP.Domain\obj\Debug\net6.0\HithamKhalilEP.Domain.dll
+C:\Users\User\source\repos\OnlinePollApp-HithamKhalil\OnlinePollApp-HithamKhalil\HithamKhalilEP.Domain\obj\Debug\net6.0\refint\HithamKhalilEP.Domain.dll
+C:\Users\User\source\repos\OnlinePollApp-HithamKhalil\OnlinePollApp-HithamKhalil\HithamKhalilEP.Domain\obj\Debug\net6.0\HithamKhalilEP.Domain.pdb
+C:\Users\User\source\repos\OnlinePollApp-HithamKhalil\OnlinePollApp-HithamKhalil\HithamKhalilEP.Domain\obj\Debug\net6.0\ref\HithamKhalilEP.Domain.dll
