@@ -1,12 +1,16 @@
 using YourNameEP.DataAccess.Context;
 using Microsoft.EntityFrameworkCore;
 using YourNameEP.DataAccess.Repositories;
+using HithamKhalilEP.Domain.Interfaces;
+using HithamKhalilEP.DataAccess.Repositories;
 
 var builder = WebApplication.CreateBuilder(args);
 
 // Add services to the container.
 builder.Services.AddControllersWithViews();
-builder.Services.AddScoped<PollRepository>();
+// To use JSON file-based storage
+builder.Services.AddScoped<IPollRepository, PollFileRepository>();
+
 
 
 // Register DbContext

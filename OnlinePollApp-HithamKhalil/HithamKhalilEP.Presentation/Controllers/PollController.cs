@@ -2,15 +2,16 @@
 using YourNameEP.DataAccess.Repositories;
 using YourNameEP.Domain.Models;
 using System.Threading.Tasks;
+using HithamKhalilEP.Domain.Interfaces;
 
 namespace YourNameEP.Presentation.Controllers
 {
     public class PollController : Controller
     {
-        private readonly PollRepository _pollRepository;
+        private readonly IPollRepository _pollRepository;
 
         // Constructor injection for PollRepository
-        public PollController(PollRepository pollRepository)
+        public PollController(IPollRepository pollRepository)
         {
             _pollRepository = pollRepository;
         }
@@ -41,16 +42,18 @@ namespace YourNameEP.Presentation.Controllers
             return View(polls);
         }
 
+        // GET: Poll/Details/5
         public async Task<IActionResult> Details(int id)
         {
-            var poll = await _pollRepository.GetPollById(id);
+            var poll = await _pollRepository.GetPollById(id); // Async call to fetch poll by ID
 
             if (poll == null)
-                return NotFound();
+                return NotFound(); // Return 404 if the poll is not found
 
-            return View(poll);
+            return View(poll); // Pass the poll data to the view
         }
 
+        // GET: Poll/Vote/5
         [HttpGet]
         public async Task<IActionResult> Vote(int id)
         {
@@ -61,6 +64,7 @@ namespace YourNameEP.Presentation.Controllers
             return View(poll);
         }
 
+        // POST: Poll/Vote
         [HttpPost]
         public async Task<IActionResult> Vote(int pollId, int selectedOption)
         {
@@ -71,7 +75,5 @@ namespace YourNameEP.Presentation.Controllers
 
             return RedirectToAction("Index");
         }
-
-
     }
 }

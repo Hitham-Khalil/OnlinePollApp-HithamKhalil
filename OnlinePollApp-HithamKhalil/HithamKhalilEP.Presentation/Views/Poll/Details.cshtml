@@ -2,11 +2,49 @@
 
 <h2>@Model.Title</h2>
 
+<!-- Display Poll Options -->
 <ul class="list-group mb-3">
     <li class="list-group-item">Option 1: @Model.Option1Text</li>
     <li class="list-group-item">Option 2: @Model.Option2Text</li>
     <li class="list-group-item">Option 3: @Model.Option3Text</li>
 </ul>
 
+<!-- Bar Chart for Poll Results -->
+<div>
+    <canvas id="pollChart"></canvas>
+</div>
+
+<!-- Action Buttons -->
 <a href="/Poll/Vote/@Model.Id" class="btn btn-success">Vote Now</a>
 <a href="/Poll/Index" class="btn btn-secondary">Back to Polls</a>
+
+@section Scripts {
+    <script src="https://cdn.jsdelivr.net/npm/chart.js"></script>
+    <script>
+        var ctx = document.getElementById('pollChart').getContext('2d');
+        var pollChart = new Chart(ctx, {
+            type: 'bar',
+            data: {
+                labels: ['Option 1', 'Option 2', 'Option 3'], // Labels for each option
+                datasets: [{
+                    label: 'Votes',
+                    data: [
+        @Model.Option1VotesCount, // Option 1 votes
+        @Model.Option2VotesCount, // Option 2 votes
+        @Model.Option3VotesCount  // Option 3 votes
+                    ],
+                    backgroundColor: ['#FF5733', '#33FF57', '#3357FF'],
+                    borderColor: ['#FF5733', '#33FF57', '#3357FF'],
+                    borderWidth: 1
+                }]
+            },
+            options: {
+                scales: {
+                    y: {
+                        beginAtZero: true
+                    }
+                }
+            }
+        });
+    </script>
+}

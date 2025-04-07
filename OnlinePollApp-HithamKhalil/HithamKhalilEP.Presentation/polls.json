@@ -1,0 +1,13 @@
+[
+  {
+    "Id": 1,
+    "Title": "asd",
+    "Option1Text": "a",
+    "Option2Text": "b",
+    "Option3Text": "c",
+    "Option1VotesCount": 0,
+    "Option2VotesCount": 1,
+    "Option3VotesCount": 0,
+    "DateCreated": "2025-04-07T23:33:43.0748263+02:00"
+  }
+]

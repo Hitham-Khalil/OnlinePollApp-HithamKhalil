@@ -8,6 +8,7 @@
     ".NETCoreApp,Version=v6.0": {
       "HithamKhalilEP.Presentation/1.0.0": {
         "dependencies": {
+          "Chart.js": "3.7.1",
           "HithamKhalilEP.DataAccess": "1.0.0",
           "HithamKhalilEP.Domain": "1.0.0",
           "Microsoft.EntityFrameworkCore.Design": "6.0.0"
@@ -16,6 +17,7 @@
           "HithamKhalilEP.Presentation.dll": {}
         }
       },
+      "Chart.js/3.7.1": {},
       "Humanizer.Core/2.8.26": {
         "runtime": {
           "lib/netstandard2.0/Humanizer.dll": {
@@ -471,6 +473,13 @@
       "type": "project",
       "serviceable": false,
       "sha512": ""
+    },
+    "Chart.js/3.7.1": {
+      "type": "package",
+      "serviceable": true,
+      "sha512": "sha512-gJunTMEueTNdA5Hp92J9sv363msSemW+GSy1VtbrwjxCaMrp+/mgB20EdVezbP34dbM+h+A8G5XbEuL6tOJoCw==",
+      "path": "chart.js/3.7.1",
+      "hashPath": "chart.js.3.7.1.nupkg.sha512"
     },
     "Humanizer.Core/2.8.26": {
       "type": "package",
