@@ -1,0 +1,21 @@
+﻿@model List<YourNameEP.Domain.Models.Poll>
+
+<h2>Available Polls</h2>
+
+@if (!Model.Any())
+{
+    <p>No polls available.</p>
+}
+else
+{
+    <ul class="list-group">
+        @foreach (var poll in Model)
+        {
+            <li class="list-group-item">
+                <strong>@poll.Title</strong><br />
+                Created on: @poll.DateCreated.ToShortDateString() <br />
+                <a href="/Poll/Vote/@poll.Id" class="btn btn-sm btn-primary mt-2">Vote</a>
+            </li>
+        }
+    </ul>
+}

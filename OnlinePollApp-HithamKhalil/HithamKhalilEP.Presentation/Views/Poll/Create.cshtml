@@ -1,0 +1,23 @@
+﻿@model YourNameEP.Domain.Models.Poll
+
+<h2>Create a New Poll</h2>
+
+<form method="post">
+    <div class="form-group">
+        <label for="Title">Poll Title</label>
+        <input type="text" class="form-control" id="Title" name="Title" required />
+    </div>
+    <div class="form-group">
+        <label for="Option1Text">Option 1</label>
+        <input type="text" class="form-control" id="Option1Text" name="Option1Text" required />
+    </div>
+    <div class="form-group">
+        <label for="Option2Text">Option 2</label>
+        <input type="text" class="form-control" id="Option2Text" name="Option2Text" required />
+    </div>
+    <div class="form-group">
+        <label for="Option3Text">Option 3</label>
+        <input type="text" class="form-control" id="Option3Text" name="Option3Text" required />
+    </div>
+    <button type="submit" class="btn btn-primary">Create Poll</button>
+</form>
